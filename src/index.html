@@ -1,25 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link href="style.css" rel="stylesheet" ></a>
 </head>
 <body>
-   
-    <header>
 
-    </header>
+  <!-- Top bar -->
+  <header>
+    <button id="menu_toggle" aria-label="Toggle sidebar">
+      <img src="./assets/MENU.svg" alt="Menu icon">
+    </button>
+    <h1>Todo App</h1>
+    <button id="add_task" type="button">
+          <img src="./assets/ADD_TASK.svg" alt="Add task icon">
+          <span>Add task</span>
     
+    <!-- Task creation form 
+          <form id="add-task-form">
+            <label for="title">Title</label><br>
+            <input type="text" id="title" name="title"><br><br>
+
+            <label for="dueDate">Due date</label><br>
+            <input type="date" id="dueDate" name="dueDate"><br><br>
+
+            <label for="description">Description</label><br>
+            <textarea id="description" name="description" rows="4" cols="30"></textarea><br><br>
+
+            <label for="priority">Priority</label><br>
+            <select id="priority" name="priority">
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select><br><br>
+
+            <button type="submit">Submit</button>
+          </form>
+        </button>
+        -->
+  </header>
+
+  <!-- Layout container -->
+  <div class="container">
+
+    <!-- Sidebar navigation -->
+    <aside class="sidebar">
+      <nav>
+        <ul>
+          <li>
+            <a href="#" id="home">
+              <img src="./assets/HOME.svg" alt="Home icon">
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" id="inbox">
+              <img src="./assets/INBOX.svg" alt="Inbox icon">
+              <span>Inbox</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" id="projects">
+              <img src="./assets/PROJECTS.svg" alt="Projects icon">
+              <span>Projects</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" id="assignments">
+              <img src="./assets/ASSIGNMENTS.svg" alt="Assignments icon">
+              <span>Assignments</span>
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
     <main>
-        <div class="side-bar">
 
-        </div>
 
-        
+
+      <!-- Task list -->
+      <section id="task_list">
+        <!-- Tasks will be injected here -->
+      </section>
+
     </main>
 
-    <script src="script.js">
-    </script>
+  </div>
+ <!--template used to add info and the delete button for each task--> 
+<template id="task_template">
+  <div class="task_item">
+    <span class="task_title"></span>. 
+    <!-- adds the task's_title then append the task_template to task list-->
+    <button class="info_btn" type="button">
+      <img src="./assets/INFORMATIONS.svg" alt="Info icon">
+    </button>
+    <button class="delete_btn" type="button">
+      <img src="./assets/DELETE.svg" alt="Delete icon">
+    </button>
+  </div>
+</template>
+
+  <script src="script.js"></script>
 </body>
 </html>
