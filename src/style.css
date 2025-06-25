@@ -1,14 +1,67 @@
 :root {
+    
 
 }
-
+body {
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr;
+    width: 100%;
+}
 body ,html {
     margin: 0;
     padding: 0;
+    background-color: rgb(240, 240, 233);
+   
+}
+
+/* ==== Reset & Basic Layout ==== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.info_btn {
+   
+}
+
+main {
+
+}
+li {
     
+}
+.sidebar {
     
 }
 
+header {
+    display: flex;
+    flex-flow: row;
+    align-items: end;
+
+}
+
+.menu_toggle {
+
+}
+
+#add_task {
+    background-color: rgb(196, 255, 199);
+    padding: 2px;
+    fill: rgb(255, 0, 0);
+    padding-bottom: 2px;
+    color: aqua;
+}
+img .add_task {
+    color: red;
+    fill: black;
+    background-color: black;
+}
 .sidebar {
-    
+
+}
+
+.task_list {
+
 }
