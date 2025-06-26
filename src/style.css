@@ -4,7 +4,8 @@
 }
 body {
     display: grid;
-    grid-template-areas: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 0.3fr 5fr;
     width: 100%;
 }
 body ,html {
@@ -14,57 +15,125 @@ body ,html {
     height: 100%;
 }
 
-#add_task {
-    justify-items: flex-end;
-    align-self: flex-end;
-    justify-self: end;
 
- }
+#add_task {
+    background-color: rgb(132, 217, 136);
+    margin: 0;            /* resetează marginile */
+    margin-left: auto;    /* împinge butonul către capătul din dreapta */
+    border-radius: 10px;
+    /* margin-right pt a il da mai in stanga*/
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+button {
+    background: none;
+    border: none;
     
+}
+
+button :active {
     
+}
+img {
+   border: none;
+   outline: none;
+}
 /* ==== Reset & Basic Layout ==== */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
-
 .info_btn {
    
 }
 
 main {
+    grid-row-start: 2;
+    grid-row-end:3;
+    grid-column-start: 2;
+    grid-column-end:3 ;
 
 }
+ul {
+   padding-left: 0;
+}
+
 li {
+    list-style: none;
+    margin-bottom: 20px;
     
 }
-.sidebar {
+.sidebar a {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.sidebar a:hover,
+button:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* fundal negru cu transparență 10% */
+    border-radius: 50px;
+    cursor: pointer;
     
+}
+
+.sidebar {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: antiquewhite;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-size: 2rem;
 }
 
 header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
     display: flex;
+    width: 100%;
     flex-flow: row;
-    
-    
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: rgb(182, 67, 56);
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+}
 
+span {
+    color: black;
+    
+    
 }
 
 #menu_toggle {
-
+  
+  
 }
-
-#add_task {
-    background-color: rgb(196, 255, 199);
-    padding: 2px;
-    fill: rgb(255, 0, 0);
-    padding-bottom: 2px;
-    color: aqua;
-}
-
-
 
 #task_list {
 
+}
+a#assignments {
+   
+}
+#menu_toggle:hover,
+#add_task:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#menu_toggle:active,
+#add_task:active {
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: scale(0.98);
 }

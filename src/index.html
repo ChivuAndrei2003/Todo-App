@@ -10,13 +10,16 @@
 
   <!-- Top bar -->
   <header>
-    <button id="menu_toggle" aria-label="Toggle sidebar">
+    <button id="menu_toggle" aria-label="Toggle sidebar" >
       <img src="./assets/MENU.svg" alt="Menu icon" >
     </button>
-    <h1>Todo App</h1>
+
     <button id="add_task" type="button">
-          <img src="./assets/ADD_TASK.svg" alt="Add task icon" >
-          <span>Add task</span>
+      <img src="./assets/ADD_TASK.svg" alt="Add task icon" >
+      <span>Add task</span>
+    </button>
+   
+    
     
     <!-- Task creation form 
           <form id="add-task-form">
@@ -42,12 +45,8 @@
         -->
   </header>
 
-  <!-- Layout container -->
-  <div class="container">
-
     <!-- Sidebar navigation -->
     <aside class="sidebar">
-      <nav>
         <ul>
           <li>
             <a href="#" id="inbox">
@@ -69,20 +68,18 @@
           </li>
           
         </ul>
-      </nav>
     </aside>
+  
 
-    <!-- Main content -->
-    <main>
+ <!-- Main content -->
+  <main>
+  
+    <!-- Task list -->
+    <section id="task_list">
+    <!-- Tasks will be injected here -->
+    </section>
 
-      <!-- Task list -->
-      <section id="task_list">
-        <!-- Tasks will be injected here -->
-      </section>
-
-    </main>
-
-  </div>
+  </main>
   
  <!--template used to add info and the delete buttons for each task--> 
 <template id="task_template">
