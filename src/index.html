@@ -4,96 +4,84 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todo App</title>
-  <link href="style.css" rel="stylesheet" ></a>
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Top bar -->
   <header>
-    <button id="menu_toggle" aria-label="Toggle sidebar" >
-      <img src="./assets/MENU.svg" alt="Menu icon" >
+    <button id="menu_toggle" aria-label="Toggle sidebar">
+      <img src="./assets/MENU.svg" alt="Menu icon">
     </button>
-
-    <button id="add_task" type="button">
-      <img src="./assets/ADD_TASK.svg" alt="Add task icon" >
+    <h1>Todo List</h1>
+    <button id="add_task_btn" type="button"> <img src="./assets/ADD_TASK.svg" alt="Add task icon">
       <span>Add task</span>
     </button>
-   
-    
-    
-    <!-- Task creation form 
-          <form id="add-task-form">
-            <label for="title">Title</label><br>
-            <input type="text" id="title" name="title"><br><br>
-
-            <label for="dueDate">Due date</label><br>
-            <input type="date" id="dueDate" name="dueDate"><br><br>
-
-            <label for="description">Description</label><br>
-            <textarea id="description" name="description" rows="4" cols="30"></textarea><br><br>
-
-            <label for="priority">Priority</label><br>
-            <select id="priority" name="priority">
-              <option value="low">Low</option>
-              <option value="medium">Medium</option>
-              <option value="high">High</option>
-            </select><br><br>
-
-            <button type="submit">Submit</button>
-          </form>
-        </button>
-        -->
   </header>
 
-    <!-- Sidebar navigation -->
+  <div class="container">
     <aside class="sidebar">
-        <ul>
-          <li>
-            <a href="#" id="inbox">
-              <img src="./assets/INBOX.svg" alt="Inbox icon">
-              <span>Inbox</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" id="projects">
-              <img src="./assets/PROJECTS.svg" alt="Projects icon">
-              <span>Projects</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" id="assignments">
-              <img src="./assets/ASSIGNMENTS.svg" alt="Assignments icon">
-              <span>Assignments</span>
-            </a>
-          </li>
-          
-        </ul>
+        <nav class="default-filters">
+          <ul>
+            <li>
+              <a href="#" id="inbox">
+                <img src="./assets/INBOX.svg" alt="Inbox icon" class="icon">
+                <span>Inbox</span>
+              </a>
+            </li>
+            <li>
+                <a href="#" id="today">
+                    <img src="./assets/ASSIGNMENTS.svg" alt="Today icon" class="icon">
+                    <span>Today</span>
+                </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="projects-section">
+            <h2>Projects</h2>
+            <form id="project-form" class="hidden">
+              <input type="text" id="project-name-input" placeholder="Project Name" required>
+              <div class="project-form-actions">
+                <button type="submit" class="btn btn-primary">Add</button>
+                <button type="button" id="cancel-project-btn" class="btn">Cancel</button>
+              </div>
+            </form>
+            <ul id="projects-list">
+                </ul>
+            <button class="add-project-btn">
+                <img src="./assets/plus.svg" alt="Add project icon" class="icon">
+                <span>Add Project</span>
+            </button>
+        </div>
     </aside>
   
-
- <!-- Main content -->
-  <main>
-  
-    <!-- Task list -->
-    <section id="task_list">
-    <!-- Tasks will be injected here -->
-    </section>
-
-  </main>
-  
- <!--template used to add info and the delete buttons for each task--> 
-<template id="task_template">
-  <div class="task_item">
-    <span class="task_title"></span>. 
-    <!-- adds the task's_title then append the task_template to task list-->
-    <button class="info_btn" type="button">
-      <img src="./assets/INFORMATIONS.svg" alt="Info icon">
-    </button>
-    <button class="delete_btn" type="button">
-      <img src="./assets/DELETE.svg" alt="Delete icon">
-    </button>
+    <main>
+      <section id="task_list">
+      </section>
+    </main>
   </div>
-</template>
+  
+  <div id="task-modal" class="modal-overlay hidden">
+    <div class="task-form-container">
+      <form id="task-form">
+        <h3>New Task</h3>
+        <input type="text" id="task-title" placeholder="Title: e.g., Pay bills" required>
+        <textarea id="task-description" placeholder="Description" rows="3"></textarea>
+        <label for="task-dueDate">Due Date:</label>
+        <input type="date" id="task-dueDate" required>
+        <label for="task-priority">Priority:</label>
+        <select id="task-priority">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <div class="form-actions">
+          <button type="button" id="cancel-task-btn" class="btn">Cancel</button>
+          <button type="submit" class="btn btn-primary">Add Task</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
