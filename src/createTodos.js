@@ -6,5 +6,5 @@ class createToDos {
         this.dueDate = dueDate;
         this.priority = priority;
     }
-
+    
 }
