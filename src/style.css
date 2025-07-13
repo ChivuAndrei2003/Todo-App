@@ -50,7 +50,7 @@ button {
 header {
   background-color: var(--header-bg);
   color: white;
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -147,7 +147,7 @@ main {
 
 /* Utility class to hide elements */
 .hidden {
-  display: none !important; /* hides add task's form  */
+  display: none !important; /* hides add task's form and add projects's form */
 }
 
 /* Generic button styles */

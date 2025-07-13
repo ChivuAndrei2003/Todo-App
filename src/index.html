@@ -40,7 +40,8 @@
             </li>
           </ul>
         </nav>
-        <!-- sectiunea cu proiecte de la sidebar-->
+
+        <!-- SIDEBAR PROJECTS SECTION-->
         <div class="projects-section">
           <h2>Projects</h2>
           <form id="project-form" class="hidden">
@@ -58,6 +59,7 @@
             </div>
           </form>
           <ul id="projects-list"></ul>
+
           <button class="add-project-btn">
             <img src="./assets/plus.svg" alt="Add project icon" class="icon" />
             <span>Add Project</span>
@@ -84,8 +86,9 @@
             id="task-description"
             placeholder="Description"
             rows="3"
-          ></textarea
-          ><!-- casuta (textarea) pt form -->
+          ></textarea>
+
+          <!-- casuta (textarea) pt form -->
           <label for="task-dueDate">Due Date:</label>
           <input type="date" id="task-dueDate" required />
           <label for="task-priority">Priority:</label>
@@ -96,19 +99,19 @@
           </select>
 
           <label for="task-projects">Project:</label>
+          <!-- for add task's (btn) form -->
           <select id="task-projects">
             <option id="inbox">Inbox</option>
           </select>
+
           <div class="form-actions">
-            <button type="button" id="cancel-task-btn" class="btn">
-              Cancel
-            </button>
+            <button type="button" id="cancel-task-btn" class="btn">Cancel</button>
             <button type="submit" class="btn btn-primary">Add Task</button>
           </div>
         </form>
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="createTodos.js"></script>
   </body>
 </html>
