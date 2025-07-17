@@ -1,6 +1,4 @@
-export '' as "" ;
-
-class createToDos {
+export default class createToDos {
   constructor(title, description, dueDate, priority, project) {
     this.title = title;
     this.description = description;
