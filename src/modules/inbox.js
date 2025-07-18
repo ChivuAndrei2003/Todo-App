@@ -1,1 +1,7 @@
-export function loadInbox() {}
+export function loadInbox() {
+
+}
+
+export function addInbox() {
+    
+}
