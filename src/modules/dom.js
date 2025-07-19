@@ -35,9 +35,30 @@ function addTask(todos, createToDos) {
   });
 }
 
-export { addTask ,addProject};
+export { addTask, addProject };
 
 function addProject() {
-  const addProjectBtn = document.querySelector("add-project-btn");
-  
+  const addProjectBtn = document.querySelector(".add-project-btn");
+  const projectForm = document.getElementById("project-form");
+  const cancelProjectForm = document.getElementById("cancel-project-btn");
+  const submitProjectForm = document.querySelector("btn btn-primary");
+
+  addProjectBtn.addEventListener("click", () => {
+    projectForm.classList.remove("hidden");
+    console.log("clicked");
+  });
+
+  cancelProjectForm.addEventListener("click", () => {
+    projectForm.classList.add("hidden");
+  });
+
+  projectForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+  //projectForm.reset();
+  //projectForm.classList.add("hidden");
 }
+
+//dupa ce apas pe submit tre sa ii dau append la ul-ul lui si sai adaug si un button care sa
+//redirectioneze la pagina respectiva
+// si sa il adaug la task form la projects (sus)
