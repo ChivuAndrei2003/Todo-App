@@ -51,9 +51,25 @@ function addProject() {
   cancelProjectForm.addEventListener("click", () => {
     projectForm.classList.add("hidden");
   });
+  
+  const projects =[];
 
   projectForm.addEventListener("submit", (event) => {
     event.preventDefault();
+
+    const userInput = document.getElementById("project-name-input");
+    console.log(userInput.value);
+    projects.push(userInput.value);
+    
+    console.log(projects);
+    
+    submitProjectForm.addEventListener("submit" , () => {
+      const projectsLists = document.getElementById("projects-list");
+      
+      const element = document.createElement('div');
+      element.innerText = userInput.value;
+      projectsLists.appendChild(element); //probabil gresit, tre sa revizuiesc maine(am facut in my library ceva
+    })                                        // similar )
   });
   //projectForm.reset();
   //projectForm.classList.add("hidden");
